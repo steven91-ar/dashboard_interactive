@@ -5,11 +5,11 @@ import streamlit as st
 def get_connection():
     try:
         conn = mysql.connector.connect(
-            host="localhost",
-            port=3306,
-            user="root",
+            host="",
+            port=,
+            user="",
             passwd="",  # Tu peux mettre ton mot de passe ici
-            database="mydb"
+            database=""
         )
         return conn
     except mysql.connector.Error as e:
@@ -21,7 +21,7 @@ def view_all_data():
     conn = get_connection()
     if conn:
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM insurance ORDER BY id ASC")
+        cursor.execute("")
         data = cursor.fetchall()
         cursor.close()
         conn.close()
